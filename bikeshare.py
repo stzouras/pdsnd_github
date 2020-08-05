@@ -121,11 +121,11 @@ def station_stats(df):
 
     # TO DO: display most commonly used start station
     most_start_station  = df['Start Station'].mode()[0]
-    print('Most commonly used start station ',most_start_station)
+    print('Most commonly used start station is: ',most_start_station)
     
     # TO DO: display most commonly used end station
     most_end_station  = df['End Station'].mode()[0]
-    print('Most commonly used end station: ',most_end_station)
+    print('Most commonly used end station is: ',most_end_station)
     
     # TO DO: display most frequent combination of start station and end station trip
     df['combined_stations']  = df['Start Station'] + ' & ' + df['End Station']
@@ -176,7 +176,7 @@ def user_stats(df):
         gender_counts= df.groupby('Gender')['Gender'].count()
         print(gender_counts)
     except KeyError:
-        print("No Gender column is available for Washington")
+        print("No Gender column is available for Washington city")
 
 
     # TO DO: Display earliest, most recent, and most common year of birth
